@@ -1,6 +1,8 @@
 # Selection Sort
 Selection sort is an unstable sort and may not guarante that similar sorted element stay in the order in which they are inputed.
+
 It has a time complexity of O(n^2): as we need to go through each index in the array comparing it with other number in the array while arranging smallest number first
+
 For space complexity, it has O(1): the no new variable is created to store the number array while sorting. Sorting is done in the original array
 
 Selection sort is a simple sorting algorithm and is useful in cases where there is a need to preserve memory
