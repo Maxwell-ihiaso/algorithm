@@ -6,6 +6,7 @@ Bubble sort is a simple, in-place, stable sorting algorithm which repeatedly swa
 >By in-place, it means no new array is created, the sorting is done on the unsorted array.
 
 Time complexity: O(n^2)
+
 Space complexity: O(1)
 
 ### Implementation
