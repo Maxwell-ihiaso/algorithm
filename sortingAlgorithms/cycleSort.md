@@ -2,7 +2,7 @@
 
 Cycle sort is an unstable, in-place, comparison-based sorting algorithm which sorts the list using a set of cycles. Each cycle consists of placing an element at it's sorted index in the data-set, taking the element at the sorted index and placing it at it's sorted index, and repeating until the list is sorted
 
-Time Complexity: O(N^2)
+Time Complexity: O(n^2); when n is in range of [1, n] or [0, n], time complexity is O(n) as implemented below
 Space Complexity: O(1)
 
 ### Implementation 
@@ -57,5 +57,74 @@ console.log(cycleSort([3,4,5,1,2, 1, 1, 1, 1])); // Outputs: [ 1, 1, 1, 1, 1, 2,
 console.log(cycleSort([4,5,6,7,0,1,2])); // Outputs: [ 0, 1, 2, 4, 5, 6, 7 ]
 console.log(cycleSort([11,13,1, 2, 15,17])); //Outputs:  [ 1, 2, 11, 13, 15, 17 ]
 console.log(cycleSort([])); // Outputs: []
+
+// Time Complexity: O(n^2)
+// Space Complexity: O(1)
+
+```
+
+if n is in range [0, n], the algorithm would be implemented in this way
+
+```js
+
+const cycleSort = (nums) => {
+  let pos = 0;
+
+  while (pos < nums.length) {
+    // as array is of 0 based indexing so the
+    // correct position or index number of each
+    // element is element i.e. 0 will be at 0th
+    // index similarly 1 correct index will be 1 so
+    // on...
+    let correctPosition = nums[pos]
+
+    if (nums[pos] !== nums[correctPosition]) {
+        [ nums[pos], nums[correctPosition] ] = [ nums[correctPosition], nums[pos]];
+    } else {
+        // if element is at its correct position
+        // just increment i and check for remaining
+        // array elements
+        pos++;
+    }
+  }
+
+    return nums
+}
+
+// Time Complexity: O(n)
+// Space Complexity: O(1)
+
+```
+
+if n is in range [1, n], the algorithm would be implemented in this way
+
+```js
+
+const cycleSort = (nums) => {
+  let pos = 0;
+
+  while (pos < nums.length) {
+    // as array is of 1 based indexing so the
+    // correct position or index number of each
+    // element is element - 1 i.e. 1 will be at 0th
+    // index similarly 2 correct index will be 1 so
+    // on...
+    let correctPosition = nums[pos] - 1
+
+    if (nums[pos] !== nums[correctPosition]) {
+        [ nums[pos], nums[correctPosition] ] = [ nums[correctPosition], nums[pos]];
+    } else {
+        // if element is at its correct position
+        // just increment i and check for remaining
+        // array elements
+        pos++;
+    }
+  }
+
+    return nums
+}
+
+// Time Complexity: O(n)
+// Space Complexity: O(1)
 
 ```
