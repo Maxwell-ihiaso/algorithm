@@ -7,7 +7,7 @@ Space Complexity: O(1)
 
 ### Implementation 
 
-To understand the implementation of Cycle sort, we must understand for what it means for an element to be in it's sorted index. An element is said to be in it's sorted index if it is at an index that is equal to the number of elements it is greater than in the array.
+To understand the implementation of Cycle sort, we must understand what it means for an element to be in it's sorted index. An element is said to be in it's sorted index if it is at an index that is equal to the number of elements it is greater than in the array.
 
 This definition is very instrumental in the implementation of cycle sort
 
