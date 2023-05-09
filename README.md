@@ -11,3 +11,4 @@ Algorithms implementation in Javascript
 - [Merge sort](/sortingAlgorithms/mergeSort.md)
 - [Cycle sort](/sortingAlgorithms/cycleSort.md)
 - [Quick sort](/sortingAlgorithms/quickSort.md)
+- [Bitonic sort](/sortingAlgorithms/bitonicSort.md)
